@@ -3,9 +3,10 @@ pragma solidity ^0.8.9;
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 // Uncomment this line to use console.log
 // import "hardhat/console.sol";
-contract Lock2 is Initializable {
+
+contract Mozeshw2 is Initializable {
     uint private number;
-     string constant name = "Mozes0559";
+    string constant name = "Mozeshello world";
      event NumberChanged(uint256 newNumber);
     //初始化函数
     function initialize(uint256 _initValue) public initializer {
@@ -13,8 +14,8 @@ contract Lock2 is Initializable {
     }
 
     function setNumber(uint256 newNumber) public {
-        number = newNumber * 2;
-        emit NumberChanged(number);
+        number = newNumber;
+        emit NumberChanged(newNumber);
     }
 
     // Reads the last value
@@ -23,7 +24,6 @@ contract Lock2 is Initializable {
     }
 
     function getConstant() public pure returns (string memory){
-        return string(abi.encodePacked("Name: ",name));
+        return string(abi.encodePacked(name));
     }
-
 }
