@@ -7,7 +7,16 @@ Try running some of the following tasks:
 ```shell
 npx hardhat help
 npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+
+npx hardhat compile
+
+
+npx hardhat run scripts/deployLock.ts --network bnbtest
+npx hardhat verify --network bnbtest 0x5FC233C3C30123dcfc86094B082060BbA6ae7830
+npx hardhat  Lock --network bnbtest
+
+
+npx hardhat run scripts/updateLock2.ts --network bnbtest
+npx hardhat verify --network bnbtest 0x5FC233C3C30123dcfc86094B082060BbA6ae7830
+npx hardhat  Lock2 --network bnbtest
 ```
